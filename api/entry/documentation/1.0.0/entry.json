@@ -580,6 +580,18 @@
               }
             }
           },
+          "name": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "image": {
+            "type": "string"
+          },
+          "src": {
+            "type": "string"
+          },
           "created_by": {
             "required": [
               "id",
@@ -679,6 +691,18 @@
             "type": "string"
           },
           "user": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "image": {
+            "type": "string"
+          },
+          "src": {
             "type": "string"
           },
           "created_by": {

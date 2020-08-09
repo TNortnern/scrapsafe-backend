@@ -16,9 +16,21 @@
       "type": "string"
     },
     "user": {
-      "via": "entries",
       "plugin": "users-permissions",
-      "model": "user"
+      "model": "user",
+      "via": "entries"
+    },
+    "name": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "image": {
+      "type": "string"
+    },
+    "src": {
+      "type": "string"
     }
   }
 }
