@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "entries",
+  "info": {
+    "name": "Entry"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "user_prediction": {
+      "type": "string"
+    },
+    "actual_result": {
+      "type": "string"
+    },
+    "user": {
+      "via": "entries",
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}
