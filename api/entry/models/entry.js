@@ -8,12 +8,10 @@
 module.exports = {
   lifecycles: {
     async afterCreate(result, data) {
-      console.log('he')
       const fetchHazard = await strapi
         .query("type")
         .findOne({ model: result.user_prediction });
-        console.log('fetchHazard', fetchHazard)
-      const actual_result = fetchHazard.hazmat
+      const actual_result = fetchHazard ? fetchHazard.hazmat : ''
       const entry = await strapi
         .query("entry")
         .update({ id: result.id }, { actual_result });

@@ -1283,6 +1283,9 @@
                 "src": {
                   "type": "string"
                 },
+                "file": {
+                  "type": "string"
+                },
                 "created_by": {
                   "type": "string"
                 },
