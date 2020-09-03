@@ -8,7 +8,12 @@
 module.exports = {
   lifecycles: {
     async afterCreate(result, data) {
-      const actual_result = strapi.services["csv-handler"].getType();
+      console.log('he')
+      const fetchHazard = await strapi
+        .query("type")
+        .findOne({ model: result.user_prediction });
+        console.log('fetchHazard', fetchHazard)
+      const actual_result = fetchHazard.hazmat
       const entry = await strapi
         .query("entry")
         .update({ id: result.id }, { actual_result });
